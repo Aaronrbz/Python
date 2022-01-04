@@ -1,0 +1,52 @@
+from sys import exit
+class Archivo:
+    def __init__(self,nombre):
+        try:
+            self.f=open(nombre,'r')
+            self.nombre=nombre
+        except:
+            print("No se puede abrir el archivo")
+            exit()
+    def muestra(self):
+        for linea in self.f:
+            print("{:3}:{}",format(linea),end="")
+        self.f.seek(0)          
+    def cuentaVocales(s):
+        contador=0
+        for i in range (len(s)):
+                if s[i] in set("aeiouàèììòù"):
+                  contador+=1
+        return contador
+        contador=0
+        for linea in self.f:
+                  contador+=vocales(linea)
+        sel.f.seek(0)
+        return contador
+    def cuentaConsonates(s):
+        contador=0
+        for i in range (len(s)):
+                if s[i] in set("bcdefghjklmnpqrstvwxyz"):
+                  contador+=1
+        return contador
+        contador=0
+        for linea in self.f:
+                  contador+=vocales(linea)
+        sel.f.seek(0)
+        return contador
+     def cuentaSisgnosPuntuacion(s):
+        contador=0
+        for i in range (len(s)):
+                if s[i] in set(".,;:¡!¿?"):
+                  contador+=1
+        return contador
+        contador=0
+        for linea in self.f:
+                  contador+=vocales(linea)
+        sel.f.seek(0)
+        return contador
+     
+
+nomb='clases3.txt'
+archivo=Archivo(nomb)
+archivo.muestra()
+archivo.cuentaVocales()
